@@ -32,8 +32,8 @@ jobs:
         with:
           node-version: 18
       
-      - name: Install yarn
-        run: npm install yarn
+      - name: Installing Node Modules
+        run: yarn install
         
       - name: Build React App
         run: yarn build
