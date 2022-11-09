@@ -39,7 +39,7 @@ jobs:
         run: yarn build
       
       - name: Install Surge
-        run: yarn global install surge
+        run: yarn global add surge
       
       - name: Deploy on Surge
         run: surge ./build sarmad-khalique.surge.sh --token ${{secrets.SURGE_TOKEN}}
