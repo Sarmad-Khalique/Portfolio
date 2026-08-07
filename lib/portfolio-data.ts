@@ -1,9 +1,9 @@
 export const personalInfo = {
   fullName: "Muhammad Sarmad Khalique",
   handle: "sarmad.khalique",
-  professionalTitle: "Senior Backend & AI Engineer",
+  professionalTitle: "Senior Backend & Full-Stack AI Engineer",
   headline:
-    "Senior Backend & AI Engineer. 4+ years shipping production Python APIs, LLM/RAG pipelines, and full-stack AI products for international clients.",
+    "Senior Backend & Full-Stack AI Engineer. 4+ years shipping production Python APIs, LLM/RAG pipelines, and full-stack AI products for international clients.",
   location: "Pakistan",
   phone: "+92 311 730 0418",
   phoneHref: "tel:+923117300418",
@@ -13,7 +13,7 @@ export const personalInfo = {
   email: "sarmadkhalique001@gmail.com",
   calendlyUrl: "https://calendly.com/sarmadkhalique001/new-meeting",
   shortBio:
-    "Senior Backend & AI Engineer with 4+ years shipping Python APIs, LLM/RAG pipelines, and full-stack products for international clients — from HIPAA-grade healthcare AI to platforms serving 1.5M+ users.",
+    "Senior Backend & Full-Stack AI Engineer with 4+ years shipping Python APIs, LLM/RAG pipelines, and full-stack products for international clients — from HIPAA-grade healthcare AI to platforms serving 1.5M+ users.",
   yearsExperience: "4+",
   status: "OPEN TO REMOTE WORK",
 } as const;
@@ -296,6 +296,7 @@ export const portfolioSections = {
 
 export const seoKeywords = [
   "Senior Backend Engineer",
+  "Full-Stack Engineer",
   "AI Engineer",
   "Python Developer",
   "FastAPI Developer",

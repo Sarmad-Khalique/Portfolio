@@ -10,7 +10,7 @@ export function Navbar() {
             Sarmad Khalique<span className="dot">.</span>
           </div>
           <div className="masthead-cell">
-            Backend &amp; AI engineering for the real world.
+            Backend, full-stack &amp; AI engineering for the real world.
             <span className="since">SINCE 2021</span>
           </div>
           <div className="masthead-cell">

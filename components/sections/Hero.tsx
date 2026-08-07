@@ -15,7 +15,8 @@ export function Hero() {
               <span className="hl">that actually ship</span>
             </h1>
             <p className="lede">
-              I&apos;m a Senior Backend &amp; AI Engineer with 4+ years
+              I&apos;m a Senior Backend &amp; Full-Stack AI Engineer with 4+
+              years
               shipping Python APIs, LLM/RAG pipelines, and voice AI for
               international clients — from HIPAA-grade healthcare platforms
               to systems serving 1.5M+ users.
