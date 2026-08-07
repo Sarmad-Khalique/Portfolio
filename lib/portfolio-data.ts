@@ -27,7 +27,7 @@ export const about = {
   ],
   currently: [
     { role: "Founding Engineer", co: "Torch Solutions" },
-    { role: "Tech Lead (Freelance)", co: "Gymwise.ai" },
+    { role: "Tech Lead (Freelance)", co: "Care" },
     { role: "Timezone overlap", co: "US hours" },
     { role: "Based in", co: "Pakistan" },
   ],
@@ -68,20 +68,20 @@ export const experience: Experience[] = [
   },
   {
     hash: "7d2b881",
-    company: "Gymwise.ai",
+    company: "Care",
     role: "Tech Lead (Freelance)",
     duration: "MAY 2025 — PRESENT",
-    location: "Riyadh · Remote",
+    location: "Remote",
     highlights: [
-      "Lead architecture and delivery of AI-powered fitness and gym management products.",
-      "Engineered a voice AI agent using the OpenAI Realtime API and ElevenLabs, enriched with member profiles, to automate general-query handling and cut call-centre volume.",
-      "Established automated testing with Jest and React Testing Library, wired into CI/CD to enforce quality across releases.",
+      "Lead architecture and delivery of Care, an AI-powered companion app for elderly users built around real-time voice agents.",
+      "Engineered conversational voice agents using the OpenAI Realtime API and Agora Conversational SDK for low-latency, natural dialogue.",
+      "Designed the voice interaction layer so seniors can talk with AI agents for check-ins, reminders, and everyday support without a complex UI.",
     ],
     technologies: [
       "OpenAI Realtime API",
-      "ElevenLabs",
+      "Agora Conversational SDK",
+      "Voice AI",
       "React",
-      "Jest",
       "CI/CD",
     ],
   },
@@ -154,12 +154,12 @@ export const featuredProjects: FeaturedProject[] = [
     metric: "→ FastAPI · Async Python · PostgreSQL",
   },
   {
-    name: "Gymwise.ai",
+    name: "Care",
     badge: "CLIENT · VOICE AI",
     badgeVariant: "client",
     description:
-      "Voice agent for gym member support using the OpenAI Realtime API and ElevenLabs, enriched with member profiles to cut call-centre load.",
-    metric: "→ OpenAI Realtime API · ElevenLabs · React",
+      "AI companion app for elderly people with conversational voice agents — real-time dialogue via the OpenAI Realtime API and Agora Conversational SDK.",
+    metric: "→ OpenAI Realtime API · Agora Conversational SDK",
   },
   {
     name: "INconnect LiDAR Scanner",
@@ -201,6 +201,7 @@ export const stack = [
     values: [
       "OpenAI API",
       "OpenAI Realtime API",
+      "Agora Conversational SDK",
       "Voice AI",
       "RAG",
       "AI Agents",
