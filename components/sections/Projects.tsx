@@ -1,34 +1,63 @@
-import { featuredProjects, portfolioSections } from "@/lib/portfolio-data";
-import { Reveal } from "@/components/ui/Reveal";
+import Image from "next/image";
+import { featuredProjects } from "@/lib/portfolio-data";
+
+const artVariants = [
+  "art-sun",
+  "art-tracks",
+  "art-rings",
+  "art-grid",
+  "art-wave",
+  "art-tri",
+];
 
 export function Projects() {
-  const { eyebrow, title, lede } = portfolioSections.projects;
-
   return (
-    <section id="projects">
+    <section id="projects" className="sec">
       <div className="wrap">
-        <Reveal className="eyebrow">{eyebrow}</Reveal>
-        <Reveal as="h2" className="title">
-          {title}
-        </Reveal>
-        <Reveal as="p" className="section-lede">
-          {lede}
-        </Reveal>
+        <div className="sec-head" data-rv>
+          <h2>Selected work</h2>
+          <span className="index">01 — SHIPPED &amp; IN PRODUCTION</span>
+        </div>
+        <p className="sec-lede" data-rv>
+          Client production systems and platform work — healthcare AI, voice
+          agents, and infrastructure at scale.
+        </p>
 
-        <Reveal className="proj-grid">
-          {featuredProjects.map((project) => (
-            <article key={project.name} className="card">
-              <div className="card-top">
-                <h3>{project.name}</h3>
-                <span className={`badge ${project.badgeVariant}`}>
-                  {project.badge}
-                </span>
-              </div>
+        <div className="proj-grid">
+          {featuredProjects.map((project, i) => (
+            <article
+              key={project.name}
+              className="proj-card"
+              data-rv
+              data-rv-delay={i % 3}
+            >
+              {project.cover ? (
+                <div className="proj-cover proj-cover-img">
+                  <Image
+                    src={project.cover}
+                    alt={`${project.name} screenshot`}
+                    width={800}
+                    height={600}
+                  />
+                </div>
+              ) : (
+                <div
+                  className={`proj-cover ${artVariants[i % artVariants.length]}`}
+                  aria-hidden
+                />
+              )}
+              <span className={`proj-badge ${project.badgeVariant}`}>
+                {project.badge}
+              </span>
+              <h3>{project.name}</h3>
               <p>{project.description}</p>
               <div className="metric">{project.metric}</div>
+              {project.via && (
+                <div className="proj-via">via {project.via}</div>
+              )}
             </article>
           ))}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

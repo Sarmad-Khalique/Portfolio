@@ -27,7 +27,6 @@ export const about = {
   ],
   currently: [
     { role: "Founding Engineer", co: "Torch Solutions" },
-    { role: "Tech Lead (Freelance)", co: "Care" },
     { role: "Timezone overlap", co: "US hours" },
     { role: "Based in", co: "Pakistan" },
   ],
@@ -64,25 +63,6 @@ export const experience: Experience[] = [
       "OpenAI Realtime API",
       "AWS",
       "HIPAA",
-    ],
-  },
-  {
-    hash: "7d2b881",
-    company: "Care",
-    role: "Tech Lead (Freelance)",
-    duration: "MAY 2025 — PRESENT",
-    location: "Remote",
-    highlights: [
-      "Lead architecture and delivery of Care, an AI-powered companion app for elderly users built around real-time voice agents.",
-      "Engineered conversational voice agents using the OpenAI Realtime API and Agora Conversational SDK for low-latency, natural dialogue.",
-      "Designed the voice interaction layer so seniors can talk with AI agents for check-ins, reminders, and everyday support without a complex UI.",
-    ],
-    technologies: [
-      "OpenAI Realtime API",
-      "Agora Conversational SDK",
-      "Voice AI",
-      "React",
-      "CI/CD",
     ],
   },
   {
@@ -126,6 +106,10 @@ export type FeaturedProject = {
   badgeVariant: "prod" | "client" | "research";
   description: string;
   metric: string;
+  /** Real screenshot in /public; falls back to generated cover art. */
+  cover?: string;
+  /** Company the work was delivered through. */
+  via?: string;
 };
 
 export const featuredProjects: FeaturedProject[] = [
@@ -136,6 +120,8 @@ export const featuredProjects: FeaturedProject[] = [
     description:
       "HIPAA-compliant clinical scribe platform using LLMs and RAG, with Athena EMR integration for real-time transcription and automated medical documentation.",
     metric: "→ FastAPI · OpenAI · RAG · Athena EMR",
+    cover: "/surescribe.png",
+    via: "Torch Solutions",
   },
   {
     name: "HomeTeams.ai",
@@ -144,6 +130,7 @@ export const featuredProjects: FeaturedProject[] = [
     description:
       "Voice AI nurse assistant handling real-time patient conversation, built on the OpenAI Realtime API with Agora SDK for low-latency audio.",
     metric: "→ OpenAI Realtime API · Agora SDK",
+    via: "Torch Solutions",
   },
   {
     name: "SpotOn AI Sales Agent",
@@ -154,20 +141,14 @@ export const featuredProjects: FeaturedProject[] = [
     metric: "→ FastAPI · Async Python · PostgreSQL",
   },
   {
-    name: "Care",
-    badge: "CLIENT · VOICE AI",
-    badgeVariant: "client",
-    description:
-      "AI companion app for elderly people with conversational voice agents — real-time dialogue via the OpenAI Realtime API and Agora Conversational SDK.",
-    metric: "→ OpenAI Realtime API · Agora Conversational SDK",
-  },
-  {
     name: "INconnect LiDAR Scanner",
     badge: "CLIENT · AR / iOS",
     badgeVariant: "client",
     description:
       "iOS app using Apple ARKit for construction-site capture, generating 3D point clouds and models from LiDAR scans.",
     metric: "→ Swift · ARKit · 3D Modeling",
+    cover: "/inconnect-lidar.png",
+    via: "Torch Solutions",
   },
   {
     name: "OhmConnect",
@@ -176,6 +157,7 @@ export const featuredProjects: FeaturedProject[] = [
     description:
       "High-scale energy management platform. Contributed backend services, React/GraphQL frontend, and async processing at scale.",
     metric: "→ Django · Flask · GraphQL · Celery",
+    via: "CodeFulcrum",
   },
 ];
 
@@ -203,6 +185,7 @@ export const stack = [
       "OpenAI Realtime API",
       "Agora Conversational SDK",
       "Voice AI",
+      "LLM Integrations",
       "RAG",
       "AI Agents",
       "Vector Databases",
@@ -218,6 +201,7 @@ export const stack = [
       "Redux",
       "Zustand",
       "Tailwind CSS",
+      "Shadcn",
       "GraphQL",
     ],
   },
@@ -292,7 +276,7 @@ export const portfolioSections = {
   experience: {
     eyebrow: "/experience — log --oneline",
     title: "Where I've shipped",
-    lede: "Four roles, one thread: own the system, ship it, keep it running.",
+    lede: "Three roles, one thread: own the system, ship it, keep it running.",
   },
   projects: {
     eyebrow: "/builds — deployments",
@@ -324,8 +308,9 @@ export const seoKeywords = [
 ] as const;
 
 export const navLinks = [
-  { label: "/about", href: "#about" },
-  { label: "/experience", href: "#experience" },
-  { label: "/builds", href: "#projects" },
-  { label: "/stack", href: "#stack" },
+  { label: "Work", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "About", href: "#about" },
+  { label: "Stack", href: "#stack" },
+  { label: "Education", href: "#education" },
 ] as const;

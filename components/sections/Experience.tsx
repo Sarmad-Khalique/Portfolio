@@ -1,33 +1,27 @@
-import { experience, portfolioSections } from "@/lib/portfolio-data";
-import { Reveal } from "@/components/ui/Reveal";
+import { experience } from "@/lib/portfolio-data";
 
 export function Experience() {
-  const { eyebrow, title, lede } = portfolioSections.experience;
-
   return (
-    <section id="experience">
+    <section id="experience" className="sec">
       <div className="wrap">
-        <Reveal className="eyebrow">{eyebrow}</Reveal>
-        <Reveal as="h2" className="title">
-          {title}
-        </Reveal>
-        <Reveal as="p" className="section-lede">
-          {lede}
-        </Reveal>
+        <div className="sec-head" data-rv>
+          <h2>Where I&apos;ve shipped</h2>
+          <span className="index">02 — EXPERIENCE</span>
+        </div>
+        <p className="sec-lede" data-rv>
+          Three roles, one thread: own the system, ship it, keep it running.
+        </p>
 
-        <Reveal className="log">
-          {experience.map((job) => (
-            <div key={job.hash} className="commit">
-              <div className="commit-head">
-                <span className="commit-hash">{job.hash}</span>
-                <span className="commit-role">{job.role}</span>
-                <span className="commit-co">
-                  — {job.company}
-                  {job.location ? `, ${job.location}` : ""}
-                </span>
-                <span className="commit-date">{job.duration}</span>
+        {experience.map((job, i) => (
+          <div key={job.hash} className="xp-row" data-rv>
+            <div className="xp-num">{String(i + 1).padStart(2, "0")}</div>
+            <div>
+              <div className="xp-role">{job.role}</div>
+              <div className="xp-co">
+                {job.company}
+                {job.location ? ` — ${job.location}` : ""}
               </div>
-              <ul className="commit-body">
+              <ul>
                 {job.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
                 ))}
@@ -40,8 +34,9 @@ export function Experience() {
                 ))}
               </div>
             </div>
-          ))}
-        </Reveal>
+            <div className="xp-date">{job.duration}</div>
+          </div>
+        ))}
       </div>
     </section>
   );

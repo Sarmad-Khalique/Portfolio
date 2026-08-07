@@ -1,34 +1,22 @@
-import { portfolioSections, stack } from "@/lib/portfolio-data";
-import { Reveal } from "@/components/ui/Reveal";
+import { stack } from "@/lib/portfolio-data";
 
 export function Skills() {
-  const { eyebrow, title, lede } = portfolioSections.stack;
-
   return (
-    <section id="stack">
+    <section id="stack" className="sec">
       <div className="wrap">
-        <Reveal className="eyebrow">{eyebrow}</Reveal>
-        <Reveal as="h2" className="title">
-          {title}
-        </Reveal>
-        <Reveal as="p" className="section-lede">
-          {lede}
-        </Reveal>
+        <div className="sec-head" data-rv>
+          <h2>Tools &amp; systems</h2>
+          <span className="index">04 — THE STACK</span>
+        </div>
 
-        <Reveal className="config">
+        <div className="stack-table" data-rv>
           {stack.map((row) => (
-            <div key={row.key} className="config-row">
-              <div className="config-key">{row.key}</div>
-              <div className="config-val">
-                {row.values.map((value) => (
-                  <span key={value} className="chip">
-                    {value}
-                  </span>
-                ))}
-              </div>
+            <div key={row.key} className="stack-row">
+              <div className="stack-key">{row.key}</div>
+              <div className="stack-val">{row.values.join("  ·  ")}</div>
             </div>
           ))}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

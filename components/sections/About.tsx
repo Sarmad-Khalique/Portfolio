@@ -1,5 +1,4 @@
 import { about } from "@/lib/portfolio-data";
-import { Reveal } from "@/components/ui/Reveal";
 
 function renderParagraph(text: string) {
   const parts = text.split(/\*\*(.*?)\*\*/g);
@@ -8,33 +7,43 @@ function renderParagraph(text: string) {
   );
 }
 
+const cellTitles = [
+  "Systems that survive users",
+  "End-to-end ownership",
+  "Applied AI, not AI theatre",
+];
+
 export function About() {
   return (
-    <section id="about">
+    <section id="about" className="sec">
       <div className="wrap">
-        <Reveal className="eyebrow">/about — whoami</Reveal>
-        <Reveal as="h2" className="title">
-          {about.title}
-        </Reveal>
-        <Reveal className="about-grid">
-          <div>
-            {about.paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 48)}>{renderParagraph(paragraph)}</p>
-            ))}
-          </div>
-          <div className="now-card">
-            <div className="k">
-              <span className="live-dot" aria-hidden />
-              CURRENTLY
+        <div className="sec-head" data-rv>
+          <h2>What I&apos;m about</h2>
+          <span className="index">03 — OPERATOR PROFILE</span>
+        </div>
+
+        <div className="about-grid">
+          {about.paragraphs.map((paragraph, i) => (
+            <div
+              key={cellTitles[i]}
+              className="about-cell"
+              data-rv
+              data-rv-delay={i}
+            >
+              <h3>{cellTitles[i]}</h3>
+              <p>{renderParagraph(paragraph)}</p>
             </div>
+          ))}
+          <div className="about-cell" data-rv data-rv-delay={3}>
+            <h3>Currently</h3>
             {about.currently.map((item) => (
               <div key={item.role} className="now-item">
-                <span className="role">{item.role}</span>
+                <span>{item.role}</span>
                 <span className="co">{item.co}</span>
               </div>
             ))}
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );
