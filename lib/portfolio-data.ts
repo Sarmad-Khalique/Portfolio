@@ -53,8 +53,8 @@ export const experience: Experience[] = [
       "Architect and own end-to-end delivery of production AI products for international clients across healthcare, construction-tech, and enterprise SaaS.",
       "Built SureScribe.ai, a HIPAA-compliant healthcare AI platform using LLMs, RAG, and Athena EMR integrations for real-time clinical transcription.",
       "Architected an iOS LiDAR scanning app for INconnect GmbH using Apple ARKit for construction-site 3D point clouds and models.",
-      "Directed the SpotOn AI Sales Agent delivery — migrated microservices to an async DB layer, cutting API response time 60% by removing event-loop blocking.",
-      "Built HomeTeams.ai, a Voice AI nurse assistant, using the OpenAI Realtime API and Agora SDK.",
+      "Built Home Teams, an AI-powered caregiving app with a Voice AI nurse assistant using the OpenAI Realtime API and Agora SDK.",
+      "Delivered Sellfin, an AI-driven proptech platform for secure, transparent pre-construction real estate financing and transactions.",
     ],
     technologies: [
       "FastAPI",
@@ -137,21 +137,41 @@ export const featuredProjects: FeaturedProject[] = [
     via: "Torch Solutions",
   },
   {
-    name: "HomeTeams.ai",
+    name: "Home Teams",
     badge: "CLIENT · VOICE AI",
     badgeVariant: "client",
     description:
-      "Voice AI nurse assistant handling real-time patient conversation, built on the OpenAI Realtime API with Agora SDK for low-latency audio.",
+      "AI-powered caregiving app that streamlines and enhances the caregiving process for both caregivers (helpers) and care receivers, with a Voice AI nurse assistant built on the OpenAI Realtime API and Agora SDK.",
     metric: "→ OpenAI Realtime API · Agora SDK",
+    cover: "/hometeams.png",
     via: "Torch Solutions",
   },
   {
-    name: "SpotOn AI Sales Agent",
-    badge: "PERF · −60% LATENCY",
-    badgeVariant: "prod",
+    name: "Sellfin",
+    badge: "CLIENT · PROPTECH",
+    badgeVariant: "client",
     description:
-      "Led migration of microservices from synchronous to async architecture with an async DB layer, eliminating event-loop blocking.",
-    metric: "→ FastAPI · Async Python · PostgreSQL",
+      "AI-driven real estate platform that transforms how property is financed and transacted — giving buyers, sellers, and brokers a secure, transparent path for pre-construction deals with flexible seller financing.",
+    metric: "→ Next.js · AI · FinTech",
+    cover: "/sellfin.png",
+    via: "Torch Solutions",
+  },
+  {
+    name: "AI Sales Concierge",
+    badge: "CLIENT · SALES AI",
+    badgeVariant: "client",
+    description:
+      "Conversational AI agent that entertains inbound user queries and connects qualified leads to a sales rep. Hardened delivery with an async microservice migration that cut API response time 60%.",
+    metric: "→ FastAPI · Async Python · LLM · PostgreSQL",
+  },
+  {
+    name: "FormFlow",
+    badge: "CLIENT · AI FORMS",
+    badgeVariant: "client",
+    description:
+      "AI form builder that generates and manages forms from simple natural-language commands, with a full drag-and-drop editor for fine-grained control over fields, validation, and publishing.",
+    metric: "→ Next.js · LLM · Drag & Drop",
+    cover: "/formflow.png",
   },
   {
     name: "INconnect LiDAR Scanner",
