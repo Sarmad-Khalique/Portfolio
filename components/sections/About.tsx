@@ -19,7 +19,7 @@ export function About() {
       <div className="wrap">
         <div className="sec-head" data-rv>
           <h2>What I&apos;m about</h2>
-          <span className="index">03 — OPERATOR PROFILE</span>
+          <span className="index">03 - OPERATOR PROFILE</span>
         </div>
 
         <div className="about-grid">

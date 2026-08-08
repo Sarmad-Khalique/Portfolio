@@ -18,8 +18,8 @@ export function Hero() {
               I&apos;m a Senior Backend &amp; Full-Stack AI Engineer with 4+
               years
               shipping Python APIs, LLM/RAG pipelines, and voice AI for
-              international clients — from HIPAA-grade healthcare platforms
-              to systems serving 1.5M+ users.
+              international clients, from HIPAA-grade healthcare platforms
+              to systems serving millions of users.
             </p>
             <div className="hero-actions">
               <a

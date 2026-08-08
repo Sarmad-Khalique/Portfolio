@@ -13,7 +13,7 @@ export const personalInfo = {
   email: "sarmadkhalique001@gmail.com",
   calendlyUrl: "https://calendly.com/sarmadkhalique001/new-meeting",
   shortBio:
-    "Senior Backend & Full-Stack AI Engineer with 4+ years shipping Python APIs, LLM/RAG pipelines, and full-stack products for international clients — from HIPAA-grade healthcare AI to platforms serving 1.5M+ users.",
+    "Senior Backend & Full-Stack AI Engineer with 4+ years shipping Python APIs, LLM/RAG pipelines, and full-stack products for international clients, from HIPAA-grade healthcare AI to platforms serving millions of users.",
   yearsExperience: "4+",
   status: "OPEN TO REMOTE WORK",
 } as const;
@@ -21,9 +21,9 @@ export const personalInfo = {
 export const about = {
   title: "Engineering products end-to-end, from architecture to cloud.",
   paragraphs: [
-    "I'm a Senior Backend and Full-Stack AI Engineer based in Pakistan, working remotely with teams across the US and Gulf region. I spend most of my time in **FastAPI, Django, and LLM integrations** — designing systems that need to stay fast and correct once real users show up, not just in a demo.",
-    "Over the last four years I've owned delivery end-to-end: system architecture, backend development, cloud infrastructure, and the cross-functional back-and-forth that actually ships a product. I've contributed to **OhmConnect**, a platform serving 1.5M+ users, and delivered healthcare AI, construction-tech, and enterprise SaaS for international clients as a founding engineer.",
-    "Lately most of my work sits at the intersection of backend systems and applied AI — **RAG pipelines, voice agents built on the OpenAI Realtime API, and production LLM integrations** — where the interesting problems are less about the model and more about the system around it.",
+    "I'm a Senior Backend and Full-Stack AI Engineer based in Pakistan, working remotely with teams across the US and Gulf region. I spend most of my time in **FastAPI, Django, and LLM integrations**, designing systems that need to stay fast and correct once real users show up, not just in a demo.",
+    "Over the last four years I've owned delivery end-to-end: system architecture, backend development, cloud infrastructure, and the cross-functional back-and-forth that actually ships a product. I've contributed to **OhmConnect**, a platform serving millions of users, and delivered healthcare AI, construction-tech, and enterprise SaaS for international clients as a founding engineer.",
+    "Lately most of my work sits at the intersection of backend systems and applied AI: **RAG pipelines, voice agents built on the OpenAI Realtime API, and production LLM integrations**, where the interesting problems are less about the model and more about the system around it.",
   ],
   currently: [
     { role: "Founding Engineer", co: "Torch Solutions" },
@@ -47,7 +47,7 @@ export const experience: Experience[] = [
     hash: "a1f9c3e",
     company: "Torch Solutions",
     role: "Founding Engineer",
-    duration: "JUL 2024 — PRESENT",
+    duration: "JUL 2024 - PRESENT",
     location: "Remote",
     highlights: [
       "Architect and own end-to-end delivery of production AI products for international clients across healthcare, construction-tech, and enterprise SaaS.",
@@ -82,10 +82,10 @@ export const experience: Experience[] = [
     hash: "e44a1c9",
     company: "CodeFulcrum",
     role: "Software Engineer",
-    duration: "DEC 2022 — SEP 2024",
+    duration: "DEC 2022 - SEP 2024",
     location: "Lahore",
     highlights: [
-      "Contributed to OhmConnect, a high-scale energy management platform serving 1.5M+ users, improving performance, reliability, and uptime.",
+      "Contributed to OhmConnect, a high-scale energy management platform serving millions of users, improving performance, reliability, and uptime.",
       "Built backend services with Django and Flask; expanded frontend with React and GraphQL; optimized async workflows with Celery.",
       "Migrated the test suite from React 16 to 18, fixing breaking RTL changes that were blocking release, and restored full CI/CD pipeline health.",
       "Used AWS CloudWatch and Sentry for production monitoring and proactive incident resolution.",
@@ -103,7 +103,7 @@ export const experience: Experience[] = [
     hash: "918fbc2",
     company: "East West Soft",
     role: "Software Engineer",
-    duration: "MAY 2022 — AUG 2022",
+    duration: "MAY 2022 - AUG 2022",
     location: "Remote",
     highlights: [
       "Improved page load time from ~3s to under 1s (67% faster) by migrating the frontend to Next.js with lazy-loaded, optimized images.",
@@ -118,7 +118,7 @@ export type FeaturedProject = {
   badge: string;
   badgeVariant: "prod" | "client" | "research";
   description: string;
-  metric: string;
+  skills: string[];
   /** Real screenshot in /public; falls back to generated cover art. */
   cover?: string;
   /** Company the work was delivered through. */
@@ -132,7 +132,26 @@ export const featuredProjects: FeaturedProject[] = [
     badgeVariant: "client",
     description:
       "HIPAA-compliant clinical scribe platform using LLMs and RAG, with Athena EMR integration for real-time transcription and automated medical documentation.",
-    metric: "→ FastAPI · OpenAI · RAG · Athena EMR",
+    skills: [
+      "Expo",
+      "React Native",
+      "Django",
+      "DRF",
+      "Next.js",
+      "Vue",
+      "NativeWind",
+      "Tailwind CSS",
+      "AWS S3",
+      "Lambdas",
+      "AWS Chime SDK",
+      "Twilio",
+      "OpenAI SDK",
+      "LLM",
+      "RAG",
+      "Document Processing",
+      "HIPAA",
+      "EHR Integration",
+    ],
     cover: "/surescribe.png",
     via: "Torch Solutions",
   },
@@ -142,7 +161,14 @@ export const featuredProjects: FeaturedProject[] = [
     badgeVariant: "client",
     description:
       "AI-powered caregiving app that streamlines and enhances the caregiving process for both caregivers (helpers) and care receivers, with a Voice AI nurse assistant built on the OpenAI Realtime API and Agora SDK.",
-    metric: "→ OpenAI Realtime API · Agora SDK",
+    skills: [
+      "Expo",
+      "React Native",
+      "Django",
+      "DRF",
+      "NativeWind",
+      "Agora Conversation SDK",
+    ],
     cover: "/hometeams.png",
     via: "Torch Solutions",
   },
@@ -151,8 +177,16 @@ export const featuredProjects: FeaturedProject[] = [
     badge: "CLIENT · PROPTECH",
     badgeVariant: "client",
     description:
-      "AI-driven real estate platform that transforms how property is financed and transacted — giving buyers, sellers, and brokers a secure, transparent path for pre-construction deals with flexible seller financing.",
-    metric: "→ Next.js · AI · FinTech",
+      "AI-driven real estate platform that transforms how property is financed and transacted, giving buyers, sellers, and brokers a secure, transparent path for pre-construction deals with flexible seller financing.",
+    skills: [
+      "Next.js",
+      "Django",
+      "DRF",
+      "Tailwind CSS",
+      "DocuSign",
+      "Veriff",
+      "OpenAI SDK",
+    ],
     cover: "/sellfin.png",
     via: "Torch Solutions",
   },
@@ -162,7 +196,7 @@ export const featuredProjects: FeaturedProject[] = [
     badgeVariant: "client",
     description:
       "Conversational AI agent that entertains inbound user queries and connects qualified leads to a sales rep. Hardened delivery with an async microservice migration that cut API response time 60%.",
-    metric: "→ FastAPI · Async Python · LLM · PostgreSQL",
+    skills: ["FastAPI", "Async Python", "LLM", "PostgreSQL"],
   },
   {
     name: "FormFlow",
@@ -170,27 +204,18 @@ export const featuredProjects: FeaturedProject[] = [
     badgeVariant: "client",
     description:
       "AI form builder that generates and manages forms from simple natural-language commands, with a full drag-and-drop editor for fine-grained control over fields, validation, and publishing.",
-    metric: "→ Next.js · LLM · Drag & Drop",
+    skills: ["Next.js", "LLM", "Drag & Drop"],
     cover: "/formflow.png",
   },
   {
-    name: "INconnect LiDAR Scanner",
+    name: "Lidar Scanner",
     badge: "CLIENT · AR / iOS",
     badgeVariant: "client",
     description:
       "iOS app using Apple ARKit for construction-site capture, generating 3D point clouds and models from LiDAR scans.",
-    metric: "→ Swift · ARKit · 3D Modeling",
+    skills: ["Swift", "ARKit", "3D Modeling"],
     cover: "/inconnect-lidar.png",
     via: "Torch Solutions",
-  },
-  {
-    name: "OhmConnect",
-    badge: "PROD · 1.5M+ USERS",
-    badgeVariant: "prod",
-    description:
-      "High-scale energy management platform. Contributed backend services, React/GraphQL frontend, and async processing at scale.",
-    metric: "→ Django · Flask · GraphQL · Celery",
-    via: "CodeFulcrum",
   },
 ];
 
@@ -269,13 +294,13 @@ export const stack = [
 export const education = {
   degree: "B.S. Computer Science",
   institution: "University of the Punjab, Lahore",
-  duration: "OCT 2019 — JUL 2023",
+  duration: "OCT 2019 - JUL 2023",
   grade: "3.58/4.0",
 } as const;
 
 export const heroStats = [
   { n: "4+", l: "YEARS SHIPPING" },
-  { n: "1.5M+", l: "USERS SERVED" },
+  { n: "Millions", l: "USERS SERVED" },
   { n: "60%", l: "LATENCY CUT" },
   { n: "HIPAA", l: "COMPLIANT BUILDS" },
 ] as const;
@@ -286,7 +311,7 @@ export const terminalLines = [
   { p: "$", t: "cat role.txt", d: 550 },
   {
     p: ">",
-    t: "Senior Backend & AI Engineer — Full-Stack, GenAI",
+    t: "Senior Backend & AI Engineer - Full-Stack, GenAI",
     cls: "ok",
     d: 750,
   },
@@ -307,17 +332,17 @@ export const portfolioSections = {
     tertiaryCta: "Email me",
   },
   experience: {
-    eyebrow: "/experience — log --oneline",
+    eyebrow: "/experience - log --oneline",
     title: "Where I've shipped",
     lede: "Three roles, one thread: own the system, ship it, keep it running.",
   },
   projects: {
-    eyebrow: "/builds — deployments",
+    eyebrow: "/builds - deployments",
     title: "Selected builds",
-    lede: "A mix of client production systems and shipped work — healthcare AI, voice agents, and platforms at scale.",
+    lede: "A mix of client production systems and shipped work: healthcare AI, voice agents, and platforms at scale.",
   },
   stack: {
-    eyebrow: "/stack — config.yaml",
+    eyebrow: "/stack - config.yaml",
     title: "Tools & systems",
     lede: "The stack I reach for to design, build, and run production systems.",
   },

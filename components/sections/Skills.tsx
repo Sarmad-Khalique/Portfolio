@@ -6,7 +6,7 @@ export function Skills() {
       <div className="wrap">
         <div className="sec-head" data-rv>
           <h2>Tools &amp; systems</h2>
-          <span className="index">04 — THE STACK</span>
+          <span className="index">04 - THE STACK</span>
         </div>
 
         <div className="stack-table" data-rv>

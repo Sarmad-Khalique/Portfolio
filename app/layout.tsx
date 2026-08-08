@@ -34,12 +34,12 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `${personalInfo.fullName} — ${personalInfo.professionalTitle}`,
+  title: `${personalInfo.fullName} - ${personalInfo.professionalTitle}`,
   description: personalInfo.headline,
   keywords: [...seoKeywords],
   authors: [{ name: personalInfo.fullName }],
   openGraph: {
-    title: `${personalInfo.fullName} — ${personalInfo.professionalTitle}`,
+    title: `${personalInfo.fullName} - ${personalInfo.professionalTitle}`,
     description: personalInfo.headline,
     type: "website",
   },

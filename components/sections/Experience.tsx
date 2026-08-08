@@ -6,7 +6,7 @@ export function Experience() {
       <div className="wrap">
         <div className="sec-head" data-rv>
           <h2>Where I&apos;ve shipped</h2>
-          <span className="index">02 — EXPERIENCE</span>
+          <span className="index">02 - EXPERIENCE</span>
         </div>
         <p className="sec-lede" data-rv>
           Three roles, one thread: own the system, ship it, keep it running.
@@ -19,7 +19,7 @@ export function Experience() {
               <div className="xp-role">{job.role}</div>
               <div className="xp-co">
                 {job.company}
-                {job.location ? ` — ${job.location}` : ""}
+                {job.location ? ` - ${job.location}` : ""}
               </div>
               <ul>
                 {job.highlights.map((highlight) => (

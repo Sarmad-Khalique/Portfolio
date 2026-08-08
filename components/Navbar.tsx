@@ -11,7 +11,7 @@ export function Navbar() {
           </div>
           <div className="masthead-cell">
             Backend, full-stack &amp; AI engineering for the real world.
-            <span className="since">SINCE 2021</span>
+            <span className="since">SINCE 2022</span>
           </div>
           <div className="masthead-cell">
             Remote from Pakistan,

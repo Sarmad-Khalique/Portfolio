@@ -16,10 +16,10 @@ export function Projects() {
       <div className="wrap">
         <div className="sec-head" data-rv>
           <h2>Selected work</h2>
-          <span className="index">01 — SHIPPED &amp; IN PRODUCTION</span>
+          <span className="index">01 - SHIPPED &amp; IN PRODUCTION</span>
         </div>
         <p className="sec-lede" data-rv>
-          Client production systems and platform work — healthcare AI, voice
+          Client production systems and platform work: healthcare AI, voice
           agents, and infrastructure at scale.
         </p>
 
@@ -51,7 +51,13 @@ export function Projects() {
               </span>
               <h3>{project.name}</h3>
               <p>{project.description}</p>
-              <div className="metric">{project.metric}</div>
+              <div className="proj-skills tag-row">
+                {project.skills.map((skill) => (
+                  <span key={skill} className="tag">
+                    {skill}
+                  </span>
+                ))}
+              </div>
               {project.via && (
                 <div className="proj-via">via {project.via}</div>
               )}

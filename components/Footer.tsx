@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap foot-row">
         <span>
-          © {year} {personalInfo.fullName} — built with intent, not a
+          © {year} {personalInfo.fullName}. Built with intent, not a
           template.
         </span>
         <span>

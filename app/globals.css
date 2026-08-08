@@ -641,13 +641,14 @@ body.has-cursor button {
   flex-grow: 1;
 }
 
-.proj-card .metric {
-  font-family: var(--mono);
-  font-size: 11.5px;
-  letter-spacing: 0.02em;
-  color: var(--yellow);
+.proj-skills {
   border-top: 1px solid var(--line-soft);
   padding-top: 12px;
+}
+
+.proj-skills .tag {
+  color: var(--paper-dim);
+  border-color: var(--line);
 }
 
 .proj-via {
@@ -655,7 +656,7 @@ body.has-cursor button {
   font-style: italic;
   font-size: 13px;
   color: var(--paper-dim);
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 /* ---------- experience ---------- */
