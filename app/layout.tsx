@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Archivo,
   Archivo_Black,
@@ -7,6 +7,12 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { personalInfo, seoKeywords } from "@/lib/portfolio-data";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#14120f",
+};
 
 const archivo = Archivo({
   variable: "--font-archivo",

@@ -39,8 +39,12 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
           <section className="cs-shots" data-rv>
             <div className="cs-shots-head">
               <h2>Product surfaces</h2>
-              <span className="index">UI FROM THE SHIPPED PLATFORM</span>
+              <span className="index">REPRESENTATIVE MOCKUPS</span>
             </div>
+            <p className="cs-shots-note">
+              Illustrative mockups of the same workflows and capabilities.
+              Client UI is not shown.
+            </p>
             <div className="cs-shots-grid">
               {study.screenshots.map((shot, i) => (
                 <figure
