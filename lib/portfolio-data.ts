@@ -51,7 +51,7 @@ export const experience: Experience[] = [
     location: "Remote",
     highlights: [
       "Architect and own end-to-end delivery of production AI products for international clients across healthcare, construction-tech, and enterprise SaaS.",
-      "Built SureScribe.ai, a HIPAA-compliant healthcare AI platform using LLMs, RAG, and Athena EMR integrations for real-time clinical transcription.",
+      "Built an AI Clinical Documentation Platform, a HIPAA-oriented healthcare AI product using LLMs, RAG, and EHR integrations for real-time clinical transcription and charting.",
       "Architected an iOS LiDAR scanning app for INconnect GmbH using Apple ARKit for construction-site 3D point clouds and models.",
       "Built Home Teams, an AI-powered caregiving app with a Voice AI nurse assistant using the OpenAI Realtime API and Agora SDK.",
       "Delivered Sellfin, an AI-driven proptech platform for secure, transparent pre-construction real estate financing and transactions.",
@@ -123,15 +123,17 @@ export type FeaturedProject = {
   cover?: string;
   /** Company the work was delivered through. */
   via?: string;
+  /** Case study route under /work/[slug]. */
+  slug?: string;
 };
 
 export const featuredProjects: FeaturedProject[] = [
   {
-    name: "SureScribe.ai",
+    name: "AI Clinical Documentation Platform",
     badge: "CLIENT · HEALTHCARE",
     badgeVariant: "client",
     description:
-      "HIPAA-compliant clinical scribe platform using LLMs and RAG, with Athena EMR integration for real-time transcription and automated medical documentation.",
+      "Multi-tenant AI clinical documentation SaaS: EHR sync, HIPAA-oriented controls, async charting, document RAG, and a patient-scoped provider chatbot. Built end-to-end from discovery to go-live.",
     skills: [
       "Expo",
       "React Native",
@@ -154,6 +156,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     cover: "/surescribe.png",
     via: "Torch Solutions",
+    slug: "ai-clinical-documentation-platform",
   },
   {
     name: "Home Teams",
@@ -367,9 +370,9 @@ export const seoKeywords = [
 ] as const;
 
 export const navLinks = [
-  { label: "Work", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "About", href: "#about" },
-  { label: "Stack", href: "#stack" },
-  { label: "Education", href: "#education" },
+  { label: "Work", href: "/#projects" },
+  { label: "Experience", href: "/#experience" },
+  { label: "About", href: "/#about" },
+  { label: "Stack", href: "/#stack" },
+  { label: "Education", href: "/#education" },
 ] as const;

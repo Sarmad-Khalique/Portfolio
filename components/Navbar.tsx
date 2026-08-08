@@ -6,9 +6,9 @@ export function Navbar() {
     <>
       <header className="masthead">
         <div className="wrap masthead-grid">
-          <div className="masthead-name">
+          <Link href="/" className="masthead-name">
             Sarmad Khalique<span className="dot">.</span>
-          </div>
+          </Link>
           <div className="masthead-cell">
             Backend, full-stack &amp; AI engineering for the real world.
             <span className="since">SINCE 2022</span>
@@ -29,7 +29,7 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-          <Link href="#contact" className="nav-hire">
+          <Link href="/#contact" className="nav-hire">
             HIRE ME ↗
           </Link>
         </div>
