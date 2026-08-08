@@ -27,12 +27,44 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
           <div className="cs-cover" data-rv>
             <Image
               src={study.cover}
-              alt={`${study.title} product screenshot`}
+              alt={`${study.title} schedule screenshot`}
               width={1400}
               height={900}
               priority
             />
           </div>
+        )}
+
+        {study.screenshots && study.screenshots.length > 0 && (
+          <section className="cs-shots" data-rv>
+            <div className="cs-shots-head">
+              <h2>Product surfaces</h2>
+              <span className="index">UI FROM THE SHIPPED PLATFORM</span>
+            </div>
+            <div className="cs-shots-grid">
+              {study.screenshots.map((shot, i) => (
+                <figure
+                  key={shot.src}
+                  className="cs-shot"
+                  data-rv
+                  data-rv-delay={i % 3}
+                >
+                  <div className="cs-shot-frame">
+                    <Image
+                      src={shot.src}
+                      alt={`${study.title}: ${shot.label}`}
+                      width={1200}
+                      height={750}
+                    />
+                  </div>
+                  <figcaption>
+                    <strong>{shot.label}</strong>
+                    <span>{shot.caption}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
         )}
 
         <section className="cs-block" data-rv>

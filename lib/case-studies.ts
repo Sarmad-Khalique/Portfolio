@@ -18,6 +18,7 @@ export type CaseStudy = {
   engagement: string;
   via?: string;
   cover?: string;
+  screenshots?: { src: string; label: string; caption: string }[];
   oneLiner: string;
   summary: string[];
   pillarsIntro: string;
@@ -58,7 +59,38 @@ export const caseStudies: CaseStudy[] = [
     engagement:
       "End-to-end product build: discovery → architecture → design → implementation → delivery → go-live",
     via: "Torch Solutions",
-    cover: "/surescribe.png",
+    cover: "/clinical/schedule.png",
+    screenshots: [
+      {
+        src: "/clinical/schedule.png",
+        label: "Schedule",
+        caption: "Day-of roster with visit status, filters, and quick actions.",
+      },
+      {
+        src: "/clinical/encounter.png",
+        label: "Encounter",
+        caption:
+          "Role-aware encounter workspace with live AI documentation progress.",
+      },
+      {
+        src: "/clinical/chart.png",
+        label: "AI Chart",
+        caption:
+          "Reviewable AI note drafts with revisions, sources, and provider control.",
+      },
+      {
+        src: "/clinical/documents.png",
+        label: "Documents",
+        caption:
+          "Document intelligence with viewer, AI extraction, and patient context.",
+      },
+      {
+        src: "/clinical/copilot.png",
+        label: "AI Copilot",
+        caption:
+          "Patient-scoped RAG chatbot grounded in clinical records and labs.",
+      },
+    ],
     oneLiner:
       "Built a multi-tenant AI clinical documentation SaaS end-to-end, from raw requirements through architecture, UX, implementation, and go-live, covering EHR sync, HIPAA-oriented controls, async AI charting, document RAG, and a provider chatbot for patient-specific clinical discussion.",
     summary: [

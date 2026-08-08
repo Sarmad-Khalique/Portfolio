@@ -154,7 +154,7 @@ export const featuredProjects: FeaturedProject[] = [
       "HIPAA",
       "EHR Integration",
     ],
-    cover: "/surescribe.png",
+    cover: "/clinical/schedule.png",
     via: "Torch Solutions",
     slug: "ai-clinical-documentation-platform",
   },
