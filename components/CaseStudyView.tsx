@@ -21,13 +21,23 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
             <span>{study.engagement}</span>
             {study.via && <span>via {study.via}</span>}
           </div>
+          {study.highlights && study.highlights.length > 0 && (
+            <div className="cs-highlights">
+              {study.highlights.map((item) => (
+                <div key={item.label} className="cs-hi">
+                  <span className="k">{item.label}</span>
+                  <span className="v">{item.detail}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </header>
 
         {study.cover && (
           <div className="cs-cover" data-rv>
             <Image
               src={study.cover}
-              alt={`${study.title} schedule screenshot`}
+              alt={`${study.title} product surface`}
               width={1400}
               height={900}
               priority
@@ -258,11 +268,13 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
 
         <section className="cs-cta" data-rv>
           <h2>
-            <span className="hl">Got a clinical product to ship?</span>
+            <span className="hl">
+              {study.cta?.title ?? "Got something real to build?"}
+            </span>
           </h2>
           <p>
-            Available for remote roles and freelance engagements with US
-            timezone overlap.
+            {study.cta?.lede ??
+              "Available for remote roles and freelance engagements with US timezone overlap."}
           </p>
           <div className="hero-actions">
             <a

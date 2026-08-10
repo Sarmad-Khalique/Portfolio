@@ -19,6 +19,7 @@ export type CaseStudy = {
   via?: string;
   cover?: string;
   screenshots?: { src: string; label: string; caption: string }[];
+  highlights?: { label: string; detail: string }[];
   oneLiner: string;
   summary: string[];
   pillarsIntro: string;
@@ -49,6 +50,7 @@ export type CaseStudy = {
   outcomes: string[];
   stack: { layer: string; technologies: string }[];
   fit: { best: string; not: string };
+  cta?: { title: string; lede: string };
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -405,6 +407,288 @@ export const caseStudies: CaseStudy[] = [
     fit: {
       best: "Healthcare / regulated SaaS, AI + integrations, multi-tenant products",
       not: "“Just add ChatGPT to our form” with no tenancy, review, or data controls",
+    },
+    cta: {
+      title: "Got a clinical product to ship?",
+      lede: "Available for remote roles and freelance engagements with US timezone overlap.",
+    },
+  },
+  {
+    slug: "ai-form-builder-platform",
+    title: "AI Form Builder Platform",
+    eyebrow:
+      "Case study · Full-stack product engineering · Multi-tenant SaaS",
+    engagement: "E2E: discovery → go-live",
+    cover: "/formflow.png",
+    highlights: [
+      { label: "E2E", detail: "Discovery → go-live" },
+      { label: "AI", detail: "Multi-step generation" },
+      { label: "DnD", detail: "Builder canvas" },
+      { label: "B2B", detail: "Tenancy + plans" },
+      { label: "Ops", detail: "Approvals + analytics" },
+    ],
+    oneLiner:
+      "Built a multi-tenant AI form builder SaaS end-to-end: drag-and-drop authoring, multi-step LLM form generation with preview/insert, company workspaces with plan gates, approvals, and analytics, from raw requirements through production delivery and go-live.",
+    summary: [
+      "Multi-tenant form SaaS owned from raw requirements through architecture, design, implementation, delivery, and go-live: drag-and-drop authoring, multi-step LLM generation, workspace/plan gates, approvals, and analytics.",
+      "Sanitized for public use. No product brands, company names, or client identifiers. This is the form-builder product case study, not a healthcare or rebrand write-up.",
+      "Not a form library drop-in or a one-shot LLM dump. Production B2B SaaS: workspaces, quotas, a serious builder, reliable structured AI insert, approvals, and measurable usage.",
+    ],
+    pillarsIntro:
+      "A sellable form platform organized around five capability pillars.",
+    role: [
+      {
+        label: "Discovery",
+        detail:
+          "Requirements → flows, constraints, MVP vs later",
+        outcome: "Written scope, risks, delivery plan",
+      },
+      {
+        label: "Architecture",
+        detail:
+          "Tenancy, JWT claims, field schema, AI pipeline, analytics events",
+        outcome: "System beyond a prototype",
+      },
+      {
+        label: "Design",
+        detail:
+          "Auth, dashboard, builder, approvals, company/plans UX",
+        outcome: "Coherent product surfaces",
+      },
+      {
+        label: "Implementation",
+        detail:
+          "Next.js + Django, DnD builder, AI insert, gates, analytics",
+        outcome: "Integrated working product",
+      },
+      {
+        label: "Delivery / go-live",
+        detail: "Env/config, migrations, deploy path, demo readiness",
+        outcome: "Operable environments",
+      },
+    ],
+    discovery: {
+      inputs: [
+        "Teams need to author forms without engineering tickets.",
+        "AI should generate usable fields, not an uneditable blob.",
+        "Multiple companies need isolation, roles, and plan limits.",
+        "Approvals and comments before publish matter for collaboration.",
+        "Usage must be measurable for quotas and KPIs.",
+      ],
+      structure: [
+        "Persona map: owner, manager, employee",
+        "Activation funnel: auth → company workspace → plan → unlock builder",
+        "Capability pillars: DnD builder, AI generation, tenancy/plans, approvals, analytics",
+        "Delivery slices: authoring loop first, then AI insert, then gates and ops",
+      ],
+      principles: [
+        "AI lands in a real builder: chained prompts → typed fields → preview → editable insert",
+        "Sellable SaaS mechanics: company tenancy, roles, plan limits, JWT claim gating",
+        "Go-live readiness: auth/SMTP, deep links, env config, demo-ready authoring loop",
+        "Ambiguous requirements become personas, an activation funnel, and phased slices",
+      ],
+    },
+    problem: {
+      lede: "Buyers do not need another form library or a one-shot LLM dump. They need production B2B SaaS that authors, gates, reviews, and measures forms.",
+      needs: [
+        {
+          need: "Ambiguous product requirements",
+          why: "Must become personas, activation funnel, and phased slices",
+        },
+        {
+          need: "AI that lands in a real builder",
+          why: "Chained prompts → typed fields → preview → editable insert",
+        },
+        {
+          need: "Sellable SaaS mechanics",
+          why: "Company tenancy, roles, plan limits, JWT claim gating",
+        },
+        {
+          need: "Go-live readiness",
+          why: "Auth/SMTP, deep links, env config, demo-ready authoring loop",
+        },
+      ],
+      goal: "Ship assistive AI form authoring that behaves like production multi-tenant SaaS.",
+    },
+    constraints: [
+      "Multi-tenant company boundaries for users, forms, and analytics",
+      "Plan quotas for users, forms, submissions, fields, and storage flags",
+      "LLM output must map into a constrained widget catalog",
+      "Builder UX must combine DnD, AI insert, and unsaved navigation guards",
+      "Soft activation gates without a heavyweight BPM engine",
+      "Dual analytics: company event stream plus per-form counters",
+    ],
+    pillars: [
+      {
+        title: "Drag-and-drop form builder",
+        intent:
+          "Authoring canvas with a flexible field schema and a full field lifecycle.",
+        points: [
+          "Widget catalog of ~20 types: inputs, choice, media, layout, HTML",
+          "Canvas UX: DnD place/reorder, edit/delete, required badges",
+          "Per-field JSON styling options (font, color, alignment, type configs)",
+          "Lifecycle: Draft → Published → Archived",
+          "Persistence: bulk create new fields; incremental dirty updates",
+          "Safety / links: unsaved navigation guard; create/share use /builder/[id]",
+        ],
+        buyerValue:
+          "Operators get a serious authoring loop, not a static form template editor.",
+      },
+      {
+        title: "AI form generation",
+        intent:
+          "Multi-step LLM pipeline that ends in preview and editable insert, not a black-box dump.",
+        points: [
+          "Pipeline: user prompt → theme → field schema → HTML preview → insert to builder",
+          "Hallucinated field types constrained to the product catalog vocabulary",
+          "Templates enforce MCQ/dropdown/radio/slider option shapes",
+          "JSON mode maps output into editable canvas components",
+          "Sandboxed HTML preview before insert",
+        ],
+        buyerValue:
+          "AI accelerates authoring while keeping every field reviewable and editable in the canvas.",
+      },
+      {
+        title: "Workspace & plans",
+        intent: "Multi-tenant activation and quotas that make the product sellable.",
+        points: [
+          "Company workspace as the tenant boundary for users, forms, analytics",
+          "Roles: owner / manager / employee",
+          "Team invite/create with email onboarding",
+          "Plans with limits for users, forms, submissions, fields, storage flags",
+          "Activation gate: company → plan → unlock builder/approvals/analytics",
+          "JWT claims: role, company, has_payment_plan for client gating",
+        ],
+        buyerValue:
+          "Soft SaaS activation and plan enforcement without rewriting the product core later.",
+      },
+      {
+        title: "Approvals & collaboration",
+        intent: "Review before publish without a heavyweight BPM engine.",
+        points: [
+          "Approvals list with live field preview",
+          "Comment thread with add/update/delete",
+          "Status transitions: Draft / Published / Archived",
+          "Collaborative review suited to form publish workflows",
+        ],
+        buyerValue:
+          "Teams can gate quality before forms go live without enterprise workflow overhead.",
+      },
+      {
+        title: "Analytics & operations",
+        intent: "Event log plus per-form counters for quotas and KPIs.",
+        points: [
+          "Company event log for add user / submit / view events",
+          "Per-form counters with flexible attribute/value metrics",
+          "Dashboard: team members, form entries, total views, weekly chart",
+          "Event stream supports both quotas and product KPIs",
+        ],
+        buyerValue:
+          "Operators can see usage, enforce plan limits, and prove product value with real metrics.",
+      },
+    ],
+    shipped: [
+      {
+        surface: "Builder canvas",
+        outcome: "DnD authoring with ~20 widgets, styling options, and publish lifecycle",
+      },
+      {
+        surface: "AI generate flow",
+        outcome: "Multi-step LLM generation with preview and editable insert",
+      },
+      {
+        surface: "Company workspace",
+        outcome: "Tenant boundary with roles, invites, and plan activation",
+      },
+      {
+        surface: "Approvals",
+        outcome: "Live preview, comments, and draft/publish/archive transitions",
+      },
+      {
+        surface: "Analytics dashboard",
+        outcome: "Team, entries, views, weekly chart, and company event log",
+      },
+      {
+        surface: "Auth & deep links",
+        outcome: "JWT claims, SMTP/verification, /builder/[id] share paths",
+      },
+    ],
+    architecture: {
+      diagram: [
+        "Next.js app ── builder, dashboard, gates, React Query",
+        "Django REST API ── auth, companies, forms, AI, analytics",
+        "JWT + claims ── role, company, plan flags",
+        "OpenAI pipeline ── theme → fields → HTML",
+        "Data layer ── Postgres-ready; flexible field options JSON",
+      ],
+      patterns: [
+        "Enriched JWT gating for role, company, and plan flags",
+        "Bulk/dirty field sync for builder persistence",
+        "Chained LLM stages with catalog-constrained schemas",
+        "Event log for quotas + KPIs alongside per-form counters",
+        "Deep-linked builder URLs for create/share flows",
+      ],
+    },
+    hardProblems: [
+      "Flexible field schema: typed widgets + JSON options with order, bulk create, dirty sync",
+      "Reliable structured AI: chained prompts, catalog constraints, preview → editable insert",
+      "Builder UX complexity: DnD + AI insert + save guards as one authoring loop",
+      "Soft SaaS activation: auth → company → plan gates in layout + JWT claims",
+      "Dual analytics model: company event stream for quotas/KPIs + per-form counters",
+      "Tenant/role boundaries: company-scoped team, invites, plan limits at API validation",
+    ],
+    delivery: {
+      environments: [
+        "Environment-driven config for local → staging → production",
+        "Migrations and deploy path for API + frontend",
+        "Dockerfiles for operable delivery",
+      ],
+      goLive: [
+        "Auth/SMTP and signed verification ready for operators",
+        "Deep-linked builder URLs for demos and sharing",
+        "Plan/activation gates validated before unlock",
+        "Demo-ready authoring loop: generate → preview → insert → publish",
+      ],
+      handoff:
+        "Delivered as an operable SaaS surface: configuration via env, company/plan admin paths, and a builder loop that can be demoed without engineering in the room.",
+    },
+    outcomes: [
+      "End-to-end ownership from ambiguous requirements to go-live",
+      "AI generation that inserts editable, catalog-valid fields into a real builder",
+      "Sellable tenancy with roles, plan limits, and JWT claim gating",
+      "Approvals and analytics that make collaboration and usage measurable",
+      "Architecture ready for production SaaS constraints, not one-off demos",
+    ],
+    stack: [
+      {
+        layer: "Frontend",
+        technologies:
+          "Next.js, React, TypeScript, Tailwind, Zustand, TanStack Query, react-dnd",
+      },
+      {
+        layer: "Backend",
+        technologies: "Django, DRF, SimpleJWT, rest-registration, OpenAI SDK",
+      },
+      {
+        layer: "Data",
+        technologies: "PostgreSQL-ready; flexible JSON field options",
+      },
+      {
+        layer: "Auth / email",
+        technologies: "JWT, signed verification, SMTP",
+      },
+      {
+        layer: "Delivery",
+        technologies: "Env config, migrations, Dockerfiles",
+      },
+    ],
+    fit: {
+      best: "Multi-tenant B2B SaaS, AI + authoring tools, plan-gated products with approvals/analytics",
+      not: "“Just add ChatGPT to our form” with no tenancy, review, or data controls",
+    },
+    cta: {
+      title: "Got a form product to ship?",
+      lede: "Available for remote roles and freelance engagements with US timezone overlap. Happy to walk through architecture decisions and a phased delivery plan.",
     },
   },
 ];
