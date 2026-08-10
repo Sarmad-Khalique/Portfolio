@@ -419,7 +419,27 @@ export const caseStudies: CaseStudy[] = [
     eyebrow:
       "Case study · Full-stack product engineering · Multi-tenant SaaS",
     engagement: "E2E: discovery → go-live",
-    cover: "/formflow.png",
+    cover: "/forms/dashboard.png",
+    screenshots: [
+      {
+        src: "/forms/dashboard.png",
+        label: "Dashboard",
+        caption:
+          "Workspace analytics: forms, submissions, views, and weekly trends.",
+      },
+      {
+        src: "/forms/my-forms.png",
+        label: "My Forms",
+        caption:
+          "Form library with publish states, plan-aware workspace, and create flows.",
+      },
+      {
+        src: "/forms/ai-builder.png",
+        label: "AI Builder",
+        caption:
+          "Drag-and-drop canvas beside multi-step AI generation and insert.",
+      },
+    ],
     highlights: [
       { label: "E2E", detail: "Discovery → go-live" },
       { label: "AI", detail: "Multi-step generation" },

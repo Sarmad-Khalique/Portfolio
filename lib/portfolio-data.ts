@@ -221,7 +221,7 @@ export const featuredProjects: FeaturedProject[] = [
       "OpenAI SDK",
       "PostgreSQL",
     ],
-    cover: "/formflow.png",
+    cover: "/forms/dashboard.png",
     slug: "ai-form-builder-platform",
   },
   {
