@@ -439,6 +439,18 @@ export const caseStudies: CaseStudy[] = [
         caption:
           "Drag-and-drop canvas beside multi-step AI generation and insert.",
       },
+      {
+        src: "/forms/teams.png",
+        label: "Teams",
+        caption:
+          "Workspace roles, invites, and form access for multi-tenant collaboration.",
+      },
+      {
+        src: "/forms/submissions.png",
+        label: "Submissions",
+        caption:
+          "Submission ops with status filters, export, and per-form response tracking.",
+      },
     ],
     highlights: [
       { label: "E2E", detail: "Discovery → go-live" },
