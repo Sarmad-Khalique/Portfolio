@@ -3,7 +3,6 @@ import {
   Archivo,
   Archivo_Black,
   JetBrains_Mono,
-  Lora,
 } from "next/font/google";
 import "./globals.css";
 import { personalInfo, seoKeywords } from "@/lib/portfolio-data";
@@ -11,7 +10,7 @@ import { personalInfo, seoKeywords } from "@/lib/portfolio-data";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#14120f",
+  themeColor: "#07090d",
 };
 
 const archivo = Archivo({
@@ -24,13 +23,6 @@ const archivoBlack = Archivo_Black({
   variable: "--font-display",
   subsets: ["latin"],
   weight: "400",
-});
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: ["400", "500"],
 });
 
 const jetbrains = JetBrains_Mono({
@@ -59,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${archivo.variable} ${archivoBlack.variable} ${lora.variable} ${jetbrains.variable} antialiased`}
+        className={`${archivo.variable} ${archivoBlack.variable} ${jetbrains.variable} antialiased`}
       >
         {children}
       </body>

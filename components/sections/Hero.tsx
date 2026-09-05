@@ -1,60 +1,54 @@
-import Image from "next/image";
+import { SystemPortrait } from "@/components/SystemPortrait";
 import { heroStats, personalInfo } from "@/lib/portfolio-data";
 
 export function Hero() {
   return (
-    <section className="hero">
-      <div className="wrap">
-        <div className="hero-block" data-rv>
-          <div>
-            <h1>
-              <span className="hl">No hype, no demo-ware,</span>
-              <br />
-              <span className="hl">just backends &amp; AI</span>
-              <br />
-              <span className="hl">that actually ship</span>
-            </h1>
-            <p className="lede">
-              I&apos;m a Senior Backend &amp; Full-Stack AI Engineer with 4+
-              years
-              shipping Python APIs, LLM/RAG pipelines, and voice AI for
-              international clients, from HIPAA-grade healthcare platforms
-              to systems serving millions of users.
-            </p>
-            <div className="hero-actions">
-              <a
-                className="btn btn-dark"
-                href={personalInfo.calendlyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Book a call ↗
-              </a>
-              <a className="btn btn-line" href="#projects">
-                View the work ↗
-              </a>
-            </div>
+    <section className="hero" aria-labelledby="hero-title">
+      <div className="shell hero-grid">
+        <div className="hero-copy" data-rv>
+          <p className="eyebrow">
+            <span className="eyebrow-line" aria-hidden />
+            Backend · Applied AI · Product delivery
+          </p>
+          <h1 id="hero-title">
+            I build the <em>systems</em> behind ambitious AI products.
+          </h1>
+          <p className="hero-lede">
+            {personalInfo.shortBio} I lead the work, write the critical path,
+            and stay close through release and incident response.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#work">
+              Explore selected work <span aria-hidden>↘</span>
+            </a>
+            <a
+              className="button button-secondary"
+              href={personalInfo.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a conversation <span aria-hidden>↗</span>
+            </a>
           </div>
-          <div className="hero-art">
-            <Image
-              src="/portrait.png"
-              alt="Muhammad Sarmad Khalique"
-              width={640}
-              height={665}
-              priority
-              className="hero-portrait"
-            />
+          <div className="hero-availability">
+            <span className="status-dot" aria-hidden />
+            {personalInfo.status}
           </div>
         </div>
 
-        <div className="stats-strip">
-          {heroStats.map((stat, i) => (
-            <div key={stat.l} className="stat" data-rv data-rv-delay={i}>
-              <div className="n">{stat.n}</div>
-              <div className="l">{stat.l}</div>
-            </div>
-          ))}
+        <div className="hero-visual" data-rv data-rv-delay="1">
+          <SystemPortrait />
         </div>
+      </div>
+
+      <div className="shell metrics" aria-label="Career highlights">
+        {heroStats.map((stat, index) => (
+          <div className="metric" key={stat.l} data-rv data-rv-delay={index}>
+            <span className="metric-number">{stat.n}</span>
+            <span className="metric-label">{stat.l}</span>
+            <span className="metric-note">{stat.note}</span>
+          </div>
+        ))}
       </div>
     </section>
   );

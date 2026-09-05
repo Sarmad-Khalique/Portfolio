@@ -2,19 +2,31 @@ import { stack } from "@/lib/portfolio-data";
 
 export function Skills() {
   return (
-    <section id="stack" className="sec">
-      <div className="wrap">
-        <div className="sec-head" data-rv>
-          <h2>Tools &amp; systems</h2>
-          <span className="index">04 - THE STACK</span>
+    <section id="stack" className="section stack-section">
+      <div className="shell">
+        <div className="section-heading" data-rv>
+          <div>
+            <p className="section-kicker">04 / Technical range</p>
+            <h2>Deep backend. Enough breadth to ship.</h2>
+          </div>
+          <p>
+            Technology is selected around the constraints—not the other way
+            around.
+          </p>
         </div>
 
-        <div className="stack-table" data-rv>
-          {stack.map((row) => (
-            <div key={row.key} className="stack-row">
-              <div className="stack-key">{row.key}</div>
-              <div className="stack-val">{row.values.join("  ·  ")}</div>
-            </div>
+        <div className="stack-grid">
+          {stack.map((group, index) => (
+            <article className="stack-card" key={group.key} data-rv data-rv-delay={index}>
+              <div className="stack-card-head">
+                <span>0{index + 1}</span>
+                <span>{group.detail}</span>
+              </div>
+              <h3>{group.key}</h3>
+              <div className="stack-items">
+                {group.values.map((item) => <span key={item}>{item}</span>)}
+              </div>
+            </article>
           ))}
         </div>
       </div>

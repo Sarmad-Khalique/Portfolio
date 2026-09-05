@@ -2,41 +2,46 @@ import { experience } from "@/lib/portfolio-data";
 
 export function Experience() {
   return (
-    <section id="experience" className="sec">
-      <div className="wrap">
-        <div className="sec-head" data-rv>
-          <h2>Where I&apos;ve shipped</h2>
-          <span className="index">02 - EXPERIENCE</span>
-        </div>
-        <p className="sec-lede" data-rv>
-          Three roles, one thread: own the system, ship it, keep it running.
-        </p>
-
-        {experience.map((job, i) => (
-          <div key={job.hash} className="xp-row" data-rv>
-            <div className="xp-num">{String(i + 1).padStart(2, "0")}</div>
-            <div>
-              <div className="xp-role">{job.role}</div>
-              <div className="xp-co">
-                {job.company}
-                {job.location ? ` - ${job.location}` : ""}
-              </div>
-              <ul>
-                {job.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
-                ))}
-              </ul>
-              <div className="tag-row">
-                {job.technologies.map((tech) => (
-                  <span key={tech} className="tag">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="xp-date">{job.duration}</div>
+    <section id="experience" className="section experience-section">
+      <div className="shell">
+        <div className="section-heading" data-rv>
+          <div>
+            <p className="section-kicker">02 / Experience</p>
+            <h2>Hands-on leadership, end to end.</h2>
           </div>
-        ))}
+          <p>
+            Four roles across client delivery, applied AI, high-scale product
+            engineering, and performance work.
+          </p>
+        </div>
+
+        <div className="experience-list">
+          {experience.map((job, index) => (
+            <article className="experience-row" key={job.hash} data-rv>
+              <div className="experience-index">0{index + 1}</div>
+              <div className="experience-main">
+                <div className="experience-title">
+                  <div>
+                    <h3>{job.role}</h3>
+                    <p>{job.company} · {job.location}</p>
+                  </div>
+                  <time>{job.duration}</time>
+                </div>
+                <p className="experience-summary">{job.summary}</p>
+                <ul>
+                  {job.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+                <div className="tag-row">
+                  {job.technologies.map((technology) => (
+                    <span className="tag" key={technology}>{technology}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

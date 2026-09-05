@@ -1,4 +1,3 @@
-import { Cursor } from "@/components/Cursor";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -13,7 +12,6 @@ import { Contact } from "@/components/sections/Contact";
 export default function Home() {
   return (
     <>
-      <Cursor />
       <ScrollReveal />
       <Navbar />
       <main id="top">

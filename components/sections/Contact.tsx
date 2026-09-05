@@ -2,55 +2,33 @@ import { personalInfo } from "@/lib/portfolio-data";
 
 export function Contact() {
   return (
-    <section id="contact" className="sec">
-      <div className="wrap">
-        <div className="contact-block" data-rv>
-          <div>
-            <h2>
-              <span className="hl">Got something real</span>
-              <br />
-              <span className="hl">to build?</span>
-            </h2>
-            <p className="lede">
-              Available for remote roles and freelance engagements, with US
-              timezone overlap. Send a message or grab time on the calendar
-              directly.
-            </p>
-          </div>
-          <div className="contact-side">
+    <section id="contact" className="contact-section">
+      <div className="shell">
+        <div className="contact-panel" data-rv>
+          <p className="section-kicker">06 / Start a conversation</p>
+          <h2>Need someone who can own the whole path?</h2>
+          <p>
+            I&apos;m open to senior backend, applied AI, and hands-on technical
+            leadership work with teams that care about shipping the real thing.
+          </p>
+          <div className="contact-actions">
             <a
-              className="btn btn-dark"
+              className="button button-dark"
               href={personalInfo.calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book a call ↗
+              Book a conversation <span aria-hidden>↗</span>
             </a>
-            <a
-              className="btn btn-line"
-              href={`mailto:${personalInfo.email}?subject=Project%20Inquiry`}
-            >
-              Send a project inquiry ↗
+            <a className="contact-email" href={`mailto:${personalInfo.email}`}>
+              {personalInfo.email} <span aria-hidden>↗</span>
             </a>
-            <div className="contact-links">
-              <a href={`mailto:${personalInfo.email}`}>
-                {personalInfo.email}
-              </a>
-              <a
-                href={personalInfo.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn ↗
-              </a>
-              <a
-                href={personalInfo.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub ↗
-              </a>
-              <a href={personalInfo.phoneHref}>{personalInfo.phone}</a>
+          </div>
+          <div className="contact-footer">
+            <span><i className="status-dot" aria-hidden /> Remote from Pakistan</span>
+            <div>
+              <a href={personalInfo.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a href={personalInfo.githubUrl} target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Cursor } from "@/components/Cursor";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -42,10 +41,9 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <>
-      <Cursor />
       <ScrollReveal />
       <Navbar />
-      <main>
+      <main id="top">
         <CaseStudyView study={study} />
       </main>
       <Footer />

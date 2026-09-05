@@ -2,21 +2,16 @@ import { education } from "@/lib/portfolio-data";
 
 export function Education() {
   return (
-    <section id="education" className="sec">
-      <div className="wrap">
-        <div className="sec-head" data-rv>
-          <h2>Background</h2>
-          <span className="index">05 - EDUCATION</span>
+    <section id="education" className="education-section">
+      <div className="shell education-row" data-rv>
+        <p className="section-kicker">05 / Foundation</p>
+        <div>
+          <h2>{education.degree}</h2>
+          <p>{education.institution}</p>
         </div>
-
-        <div className="edu-row" data-rv>
-          <div>
-            <div className="deg">{education.degree}</div>
-            <div className="sch">
-              {education.institution} - GPA {education.grade}
-            </div>
-          </div>
-          <div className="when">{education.duration}</div>
+        <div className="education-meta">
+          <span>{education.duration}</span>
+          <strong>CGPA {education.grade}</strong>
         </div>
       </div>
     </section>
