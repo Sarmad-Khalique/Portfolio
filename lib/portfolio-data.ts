@@ -90,7 +90,7 @@ export const experience: Experience[] = [
     duration: "DEC 2022 — SEP 2024",
     location: "Lahore, Pakistan",
     summary:
-      "Embedded in a client engineering team supporting a US residential energy platform serving more than 1.5 million users.",
+      "Embedded in a client engineering team supporting a US residential energy platform serving 200K+ active users.",
     highlights: [
       "Delivered full-stack changes and production maintenance across Django and Flask services, Celery workflows, React, and operational systems.",
       "Repaired a roughly 400-test frontend suite during a React 16-to-18 migration in about two days, restoring CI and unblocking the release.",
@@ -179,7 +179,7 @@ export const featuredProjects: FeaturedProject[] = [
     badge: "PLATFORM ENGINEERING",
     description:
       "Full-stack product delivery and production support across backend services, scheduled workflows, React surfaces, testing, CI, and incident response.",
-    impact: "1.5M+ users served",
+    impact: "200K+ active users",
     skills: ["Django", "Flask", "Celery", "React", "GraphQL", "AWS"],
     visual: "scale",
   },
@@ -217,7 +217,7 @@ export const education = {
 
 export const heroStats = [
   { n: "4+", l: "Years shipping", note: "Discovery to production" },
-  { n: "1.5M+", l: "Users on one platform", note: "High-scale energy" },
+  { n: "200K+", l: "Active users on one platform", note: "High-scale energy" },
   { n: "−60%", l: "API response time", note: "Async modernisation" },
   { n: "3", l: "Concurrent engagements", note: "Led hands-on" },
 ] as const;

@@ -8,7 +8,7 @@ const diagrams: Record<FeaturedProject["visual"], string[]> = {
   forms: ["PROMPT", "BUILD", "SUBMIT", "REVIEW"],
   voice: ["PROFILE", "REALTIME", "ASSIST", "ACTION"],
   async: ["REQUEST", "ASYNC API", "DATA", "−60%"],
-  scale: ["1.5M+", "SERVICES", "WORKERS", "OBSERVE"],
+  scale: ["200K+", "SERVICES", "WORKERS", "OBSERVE"],
 };
 
 function ProjectVisual({ project }: { project: FeaturedProject }) {
