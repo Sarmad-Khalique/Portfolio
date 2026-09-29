@@ -14,8 +14,8 @@ export const personalInfo = {
   email: "sarmadkhalique001@gmail.com",
   calendlyUrl: "https://calendly.com/sarmadkhalique001/new-meeting",
   shortBio:
-    "Backend and Applied AI Engineer with around 4 years of experience delivering Python products from discovery to production across healthcare, payments, energy, workplace operations, and voice AI.",
-  yearsExperience: "Around 4",
+    "Backend and Applied AI Engineer with 4+ years delivering Python products from discovery to production across healthcare, payments, energy, workplace operations, and voice AI.",
+  yearsExperience: "4+",
   status: "Available for the right remote opportunity",
 } as const;
 
@@ -216,7 +216,7 @@ export const education = {
 } as const;
 
 export const heroStats = [
-  { n: "Around 4", l: "Years shipping", note: "Discovery to production" },
+  { n: "4+", l: "Years shipping", note: "Discovery to production" },
   { n: "200K+", l: "Active users on one platform", note: "High-scale energy" },
   { n: "−60%", l: "API response time", note: "Async modernisation" },
   { n: "3", l: "Concurrent engagements", note: "Led hands-on" },
